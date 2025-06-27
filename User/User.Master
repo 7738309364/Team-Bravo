@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="eLearning.User.User" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>eLearning Admin</title>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Tbd+hkNSeUnIfqAb+HAd5wdd1WSqHkh0LAb2T2p7NDFZfK4VJ+BtK9kZ0sGc9EXa+KNDrNU5XLMIPm36CyJLcQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="/user/Content/userstyle.css" rel="stylesheet" /> 
+    <script src="/user/Scripts/userscript.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="logo">ELearning</div>
+                <ul class="menu">
+                    <li><a href="Dashboard.aspx"><i class="fas fa-home"></i> Dashboard</a></li>
+
+                    <li class="has-sub">
+                        <a href="javascript:void(0)"><i class="fas fa-book"></i> Courses</a>
+                        <ul class="submenu">
+                            <li><a href="course.aspx"><i class="fas fa-book-reader"></i> My Courses</a></li>
+                            <li><a href="#"><i class="fas fa-list"></i> Course List</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-sub">
+                        <a href="javascript:void(0)"><i class="fas fa-credit-card"></i> Subscription</a>
+                        <ul class="submenu">
+                            <li><a href="#"><i class="fas fa-shopping-cart"></i> Purchase Subscription</a></li>
+                            <li><a href="#"><i class="fas fa-shopping-bag"></i> Purchase Course</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-sub">
+                        <a href="javascript:void(0)"><i class="fas fa-store"></i> Shop</a>
+                        <ul class="submenu">
+                            <li><a href="#"><i class="fas fa-cart-plus"></i> Add To Cart</a></li>
+                            <li><a href="#"><i class="fas fa-history"></i> Transaction History</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="main">
+                <header class="topbar">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search..." class="search-box" />
+
+                    </div>
+                </header>
+
+                <!-- Page Content -->
+                <main class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+                </main>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
